@@ -29,9 +29,6 @@ public class User {
     @Column(unique = true)
     private String email;
 
-    @NotBlank(message = "Password is required")
-    @Size(min = 6, message = "Password must be at least 6 characters")
-    private String password;
 
     @NotBlank(message = "Phone number is required")
     private String phone;
@@ -44,12 +41,11 @@ public class User {
     // Constructors, getters, setters
     public User() {}
 
-    public User(String username, String firstName, String lastName, String email, String password, String phone, String address) {
+    public User(String username, String firstName, String lastName, String email, String phone, String address) {
         this.username = username;
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
-        this.password = password;
         this.phone = phone;
         this.address = address;
         this.role = Role.USER;
@@ -99,13 +95,6 @@ public class User {
         this.email = email;
     }
 
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
 
     public String getPhone() {
         return phone;

@@ -1,9 +1,15 @@
 server:
-  port: 8080
+  port: 8085
 
 spring:
   application:
     name: gateway
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8080/realms/ecommerce
+          jwk-set-uri: http://localhost:8080/realms/ecommerce/protocol/openid-connect/certs
   cloud:
     gateway:
       globalcors:

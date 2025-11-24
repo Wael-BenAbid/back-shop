@@ -6,6 +6,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.client.RestTemplate;
+import org.springframework.http.HttpMethod;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpHeaders;
 
 import java.util.List;
 import java.util.Optional;
@@ -33,7 +37,27 @@ public class OrderController {
     @PostMapping
     @PreAuthorize("hasRole('USER')")
     public Order createOrder(@RequestBody Order order) {
-        return orderRepository.save(order);
+        Order savedOrder = orderRepository.save(order);
+        // Decrement stock for each product
+        RestTemplate restTemplate = new RestTemplate();
+        for (Long productId : savedOrder.getProductIds()) {
+            try {
+                HttpHeaders headers = new HttpHeaders();
+                // Assume token is passed or use service account
+                // For simplicity, assume product-service allows update without auth for internal calls
+                HttpEntity<Void> entity = new HttpEntity<>(headers);
+                restTemplate.exchange(
+                    "http://localhost:8081/api/products/" + productId + "/decrement-stock",
+                    HttpMethod.PUT,
+                    entity,
+                    Void.class
+                );
+            } catch (Exception e) {
+                // Log error, but don't fail order
+                System.err.println("Failed to decrement stock for product " + productId + ": " + e.getMessage());
+            }
+        }
+        return savedOrder;
     }
 
     @PutMapping("/{id}")
@@ -42,7 +66,7 @@ public class OrderController {
         Optional<Order> order = orderRepository.findById(id);
         if (order.isPresent()) {
             Order updatedOrder = order.get();
-            updatedOrder.setUserId(orderDetails.getUserId());
+            updatedOrder.setUsername(orderDetails.getUsername());
             updatedOrder.setProductIds(orderDetails.getProductIds());
             updatedOrder.setStatus(orderDetails.getStatus());
             return ResponseEntity.ok(orderRepository.save(updatedOrder));

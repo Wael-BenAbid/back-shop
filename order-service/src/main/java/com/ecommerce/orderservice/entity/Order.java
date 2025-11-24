@@ -11,7 +11,7 @@ public class Order {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private Long userId;
+    private String username;
     private LocalDateTime orderDate;
     private String status;
 
@@ -21,8 +21,8 @@ public class Order {
     // Constructors, getters, setters
     public Order() {}
 
-    public Order(Long userId, List<Long> productIds, String status) {
-        this.userId = userId;
+    public Order(String username, List<Long> productIds, String status) {
+        this.username = username;
         this.productIds = productIds;
         this.status = status;
         this.orderDate = LocalDateTime.now();
@@ -36,12 +36,12 @@ public class Order {
         this.id = id;
     }
 
-    public Long getUserId() {
-        return userId;
+    public String getUsername() {
+        return username;
     }
 
-    public void setUserId(Long userId) {
-        this.userId = userId;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public LocalDateTime getOrderDate() {

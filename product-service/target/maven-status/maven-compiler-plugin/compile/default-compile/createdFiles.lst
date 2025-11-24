@@ -1,11 +1,10 @@
 com\ecommerce\productservice\security\SecurityConfig.class
 com\ecommerce\productservice\security\CustomUserDetailsService.class
+com\ecommerce\productservice\controller\FileUploadController.class
 com\ecommerce\productservice\entity\Product.class
-com\ecommerce\productservice\security\JwtAuthenticationFilter.class
 com\ecommerce\productservice\entity\Category.class
 com\ecommerce\productservice\repository\CategoryRepository.class
 com\ecommerce\productservice\controller\CategoryController.class
 com\ecommerce\productservice\ProductServiceApplication.class
 com\ecommerce\productservice\repository\ProductRepository.class
-com\ecommerce\productservice\security\JwtUtil.class
 com\ecommerce\productservice\controller\ProductController.class

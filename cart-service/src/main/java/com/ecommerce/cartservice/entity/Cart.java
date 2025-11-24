@@ -9,7 +9,7 @@ public class Cart {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private Long userId;
+    private String username;
 
     @ElementCollection
     private List<Long> productIds;
@@ -17,8 +17,8 @@ public class Cart {
     // Constructors, getters, setters
     public Cart() {}
 
-    public Cart(Long userId, List<Long> productIds) {
-        this.userId = userId;
+    public Cart(String username, List<Long> productIds) {
+        this.username = username;
         this.productIds = productIds;
     }
 
@@ -30,12 +30,12 @@ public class Cart {
         this.id = id;
     }
 
-    public Long getUserId() {
-        return userId;
+    public String getUsername() {
+        return username;
     }
 
-    public void setUserId(Long userId) {
-        this.userId = userId;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public List<Long> getProductIds() {

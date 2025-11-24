@@ -98,4 +98,19 @@ public class ProductController {
             return ResponseEntity.notFound().build();
         }
     }
+
+    @PutMapping("/{id}/decrement-stock")
+    public ResponseEntity<Void> decrementStock(@PathVariable Long id) {
+        Optional<Product> productOpt = productRepository.findById(id);
+        if (productOpt.isPresent()) {
+            Product product = productOpt.get();
+            if (product.getStock() > 0) {
+                product.setStock(product.getStock() - 1);
+                productRepository.save(product);
+            }
+            return ResponseEntity.ok().build();
+        } else {
+            return ResponseEntity.notFound().build();
+        }
+    }
 }

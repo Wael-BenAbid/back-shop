@@ -45,7 +45,7 @@ public class CartController {
         Optional<Cart> cart = cartRepository.findById(id);
         if (cart.isPresent()) {
             Cart updatedCart = cart.get();
-            updatedCart.setUserId(cartDetails.getUserId());
+            updatedCart.setUsername(cartDetails.getUsername());
             updatedCart.setProductIds(cartDetails.getProductIds());
             return ResponseEntity.ok(cartRepository.save(updatedCart));
         } else {
@@ -72,7 +72,7 @@ public class CartController {
 
         // Find existing cart for user or create new one
         Optional<Cart> existingCart = cartRepository.findAll().stream()
-            .filter(cart -> cart.getUserId() != null && cart.getUserId().toString().equals(username))
+            .filter(cart -> cart.getUsername() != null && cart.getUsername().equals(username))
             .findFirst();
 
         Cart cart;
@@ -90,7 +90,7 @@ public class CartController {
         } else {
             // Create new cart
             cart = new Cart();
-            cart.setUserId(Long.parseLong(username)); // Assuming username is numeric ID
+            cart.setUsername(username);
             List<Long> productIds = new java.util.ArrayList<>();
             productIds.add(request.get("productId"));
             cart.setProductIds(productIds);

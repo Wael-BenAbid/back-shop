@@ -1,11 +1,10 @@
-C:\Users\waelb\Desktop\projet backend\user-service\src\main\java\com\ecommerce\userservice\entity\User.java
-C:\Users\waelb\Desktop\projet backend\user-service\src\main\java\com\ecommerce\userservice\dto\AuthResponse.java
-C:\Users\waelb\Desktop\projet backend\user-service\src\main\java\com\ecommerce\userservice\repository\UserRepository.java
-C:\Users\waelb\Desktop\projet backend\user-service\src\main\java\com\ecommerce\userservice\security\SecurityConfig.java
-C:\Users\waelb\Desktop\projet backend\user-service\src\main\java\com\ecommerce\userservice\security\JwtAuthenticationFilter.java
-C:\Users\waelb\Desktop\projet backend\user-service\src\main\java\com\ecommerce\userservice\dto\AuthRequest.java
-C:\Users\waelb\Desktop\projet backend\user-service\src\main\java\com\ecommerce\userservice\security\JwtUtil.java
-C:\Users\waelb\Desktop\projet backend\user-service\src\main\java\com\ecommerce\userservice\UserServiceApplication.java
-C:\Users\waelb\Desktop\projet backend\user-service\src\main\java\com\ecommerce\userservice\security\CustomUserDetailsService.java
-C:\Users\waelb\Desktop\projet backend\user-service\src\main\java\com\ecommerce\userservice\service\AuthService.java
-C:\Users\waelb\Desktop\projet backend\user-service\src\main\java\com\ecommerce\userservice\controller\UserController.java
+C:\Users\waelb\Desktop\shop\back-shop\user-service\src\main\java\com\ecommerce\userservice\controller\UserController.java
+C:\Users\waelb\Desktop\shop\back-shop\user-service\src\main\java\com\ecommerce\userservice\entity\User.java
+C:\Users\waelb\Desktop\shop\back-shop\user-service\src\main\java\com\ecommerce\userservice\controller\GlobalExceptionHandler.java
+C:\Users\waelb\Desktop\shop\back-shop\user-service\src\main\java\com\ecommerce\userservice\service\AuthService.java
+C:\Users\waelb\Desktop\shop\back-shop\user-service\src\main\java\com\ecommerce\userservice\repository\UserRepository.java
+C:\Users\waelb\Desktop\shop\back-shop\user-service\src\main\java\com\ecommerce\userservice\security\CustomUserDetailsService.java
+C:\Users\waelb\Desktop\shop\back-shop\user-service\src\main\java\com\ecommerce\userservice\dto\AuthRequest.java
+C:\Users\waelb\Desktop\shop\back-shop\user-service\src\main\java\com\ecommerce\userservice\security\SecurityConfig.java
+C:\Users\waelb\Desktop\shop\back-shop\user-service\src\main\java\com\ecommerce\userservice\UserServiceApplication.java
+C:\Users\waelb\Desktop\shop\back-shop\user-service\src\main\java\com\ecommerce\userservice\dto\AuthResponse.java

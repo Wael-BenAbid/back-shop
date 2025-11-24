@@ -1,8 +1,6 @@
-C:\Users\waelb\Desktop\projet backend\order-service\src\main\java\com\ecommerce\orderservice\entity\Order.java
-C:\Users\waelb\Desktop\projet backend\order-service\src\main\java\com\ecommerce\orderservice\security\JwtAuthenticationFilter.java
-C:\Users\waelb\Desktop\projet backend\order-service\src\main\java\com\ecommerce\orderservice\OrderServiceApplication.java
-C:\Users\waelb\Desktop\projet backend\order-service\src\main\java\com\ecommerce\orderservice\security\SecurityConfig.java
-C:\Users\waelb\Desktop\projet backend\order-service\src\main\java\com\ecommerce\orderservice\security\JwtUtil.java
-C:\Users\waelb\Desktop\projet backend\order-service\src\main\java\com\ecommerce\orderservice\repository\OrderRepository.java
-C:\Users\waelb\Desktop\projet backend\order-service\src\main\java\com\ecommerce\orderservice\security\CustomUserDetailsService.java
-C:\Users\waelb\Desktop\projet backend\order-service\src\main\java\com\ecommerce\orderservice\controller\OrderController.java
+C:\Users\waelb\Desktop\shop\back-shop\order-service\src\main\java\com\ecommerce\orderservice\security\SecurityConfig.java
+C:\Users\waelb\Desktop\shop\back-shop\order-service\src\main\java\com\ecommerce\orderservice\entity\Order.java
+C:\Users\waelb\Desktop\shop\back-shop\order-service\src\main\java\com\ecommerce\orderservice\repository\OrderRepository.java
+C:\Users\waelb\Desktop\shop\back-shop\order-service\src\main\java\com\ecommerce\orderservice\controller\OrderController.java
+C:\Users\waelb\Desktop\shop\back-shop\order-service\src\main\java\com\ecommerce\orderservice\security\CustomUserDetailsService.java
+C:\Users\waelb\Desktop\shop\back-shop\order-service\src\main\java\com\ecommerce\orderservice\OrderServiceApplication.java
