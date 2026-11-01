@@ -8,7 +8,7 @@ spring:
     url: jdbc:postgresql://localhost:5433/ecommerce_db
     driver-class-name: org.postgresql.Driver
     username: postgres
-    password: 12345
+    password: ${DB_PASSWORD:12345}
   jpa:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
     hibernate:
@@ -26,11 +26,11 @@ keycloak:
   realm: ecommerce
   client-id: ecommerce-client
   credentials:
-    secret: 9i4ddKl4ctcuKMXpEGSFEAzEQ5dwfehP
+    secret: ${KEYCLOAK_CLIENT_SECRET}
   token-url: http://localhost:8080/realms/ecommerce/protocol/openid-connect/token
   admin:
     username: admin
-    password: admin123
+    password: ${KEYCLOAK_ADMIN_PASSWORD}
 
 eureka:
   client:
